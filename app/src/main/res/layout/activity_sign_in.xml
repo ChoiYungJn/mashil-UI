@@ -15,10 +15,9 @@
         android:id="@+id/closeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_baseline_close_24"
-        app:layout_constraintVertical_chainStyle="packed"
+        android:src="@drawable/close_btn"
+        android:layout_margin="14dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/RequestInfoLine"
         app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
@@ -28,8 +27,8 @@
         android:text="@string/sign_in_info_request"
         android:textColor="@color/black"
         android:textSize="48sp"
-        android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@+id/closeButton"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/signIn_username"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -37,7 +36,7 @@
     <EditText
         android:id="@+id/signIn_username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="21dp"
         android:background="@drawable/text_box"
         android:backgroundTint="#F5F5F5"
@@ -49,6 +48,7 @@
         android:textSize="20sp"
         android:paddingHorizontal="10dp"
         android:gravity="center_vertical"
+        app:layout_constraintHeight_percent="0.068"
         app:layout_constraintTop_toBottomOf="@+id/RequestInfoLine"
         app:layout_constraintBottom_toTopOf="@+id/signIn_password"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -57,7 +57,7 @@
     <EditText
         android:id="@+id/signIn_password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/text_box"
         android:backgroundTint="#F5F5F5"
@@ -70,20 +70,11 @@
         android:textSize="20sp"
         android:paddingHorizontal="10dp"
         android:gravity="center_vertical"
+        app:layout_constraintHeight_percent="0.068"
         app:layout_constraintTop_toBottomOf="@+id/signIn_username"
-        app:layout_constraintBottom_toBottomOf="@+id/pad"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
-
-    <View
-        android:id="@+id/pad"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.086"
-        app:layout_constraintTop_toBottomOf="@+id/signIn_password"
-        app:layout_constraintBottom_toTopOf="@+id/RequestAgreementLine"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
 
     <ImageButton
         android:id="@+id/redEye"
@@ -95,19 +86,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/signIn_password"
         app:layout_constraintRight_toRightOf="@id/signIn_password" />
 
-    <Button
-        android:id="@+id/btn_sign_in_next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/text_box"
-        android:backgroundTint="#F0F0F0"
-        android:text="@string/next"
-        android:textSize="24sp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <TextView
         android:id="@+id/RequestAgreementLine"
         android:layout_width="match_parent"
@@ -116,7 +94,7 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintTop_toBottomOf="@+id/pad"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
         app:layout_constraintBottom_toTopOf="@+id/RequestAgreementDetail"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -129,7 +107,7 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@+id/RequestAgreementLine"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
@@ -137,7 +115,6 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginVertical="15dp"
         android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/RequestAgreementDetail"
         app:layout_constraintBottom_toTopOf="@+id/termOfService"
@@ -151,7 +128,8 @@
         android:text="@string/term_service"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3"
         app:layout_constraintBottom_toTopOf="@+id/termOfPersonality"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -180,6 +158,21 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <Button
+        android:id="@+id/btn_sign_in_next"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/text_box"
+        android:backgroundTint="#F0F0F0"
+        android:text="@string/next"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.085"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
     <ImageView
         android:id="@+id/termOfServiceButton"
         android:layout_width="wrap_content"
@@ -204,5 +197,35 @@
         app:layout_constraintTop_toTopOf="@+id/termOfPersonalLOC"
         app:layout_constraintBottom_toBottomOf="@+id/termOfPersonalLOC"
         app:layout_constraintRight_toRightOf="@id/termOfPersonalLOC"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.706" />
+
+    <CheckBox
+        android:id="@+id/checkBox6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checkbox"
+        app:layout_constraintTop_toTopOf="@+id/RequestAgreementLine"
+        app:layout_constraintBottom_toBottomOf="@+id/RequestAgreementDetail"
+        app:layout_constraintRight_toRightOf="@id/RequestAgreementLine"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

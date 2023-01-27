@@ -13,7 +13,7 @@
     <string name="sign_in_info_request"><b>가입 정보를\n입력해주세요.</b></string>
     <string name="agree_all_terms"><b>약관 전체 동의</b></string>
     <string name="agree_all_terms_detail">이용약관 및 개인정보 취급방침 동의</string>
-    <string name="term_service"><b>(필수) 서비스 이용약관</b></string>
-    <string name="term_personality"><b>(필수) 개인정보 수집 및 이용</b></string>
-    <string name="term_personal_loc"><b>(필수) 개인정보 위치 이용</b></string>
+    <string name="term_service">(필수) 서비스 이용약관</string>
+    <string name="term_personality">(필수) 개인정보 수집 및 이용</string>
+    <string name="term_personal_loc">(필수) 개인정보 위치 이용</string>
 </resources>
