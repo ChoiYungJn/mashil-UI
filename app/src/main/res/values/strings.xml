@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">mashilUI</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_id"><b>아이디</b></string>
+    <string name="prompt_password"><b>비밀번호</b></string>
+    <string name="action_log_in"><b>입장하기</b></string>
+    <string name="action_sign_in"><b>마실대학 가입하기</b></string>
+    <string name="next"><b>다음</b></string>
+    <string name="login_failed"><b>"로그인 아이디 혹은 패스워드가 잘못되었습니다."</b></string>
+    <string name="find_id"><u><b>아이디/비밀번호를 잊으셨나요?</b></u></string>
+    <string name="sign_in_id"><b>아이디: 영문으로 시작, 최소 4글자</b></string>
+    <string name="sign_in_password"><b>비밀번호: 최소 6글자</b></string>
+    <string name="sign_in_info_request"><b>가입 정보를\n입력해주세요.</b></string>
+    <string name="agree_all_terms"><b>약관 전체 동의</b></string>
+    <string name="agree_all_terms_detail">이용약관 및 개인정보 취급방침 동의</string>
+    <string name="term_service"><b>(필수) 서비스 이용약관</b></string>
+    <string name="term_personality"><b>(필수) 개인정보 수집 및 이용</b></string>
+    <string name="term_personal_loc"><b>(필수) 개인정보 위치 이용</b></string>
+</resources>

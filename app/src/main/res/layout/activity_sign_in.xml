@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_in"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="false">
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/RequestInfoLine"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
+
+    <TextView
+        android:id="@+id/RequestInfoLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_info_request"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/signIn_username"
+        app:layout_constraintTop_toBottomOf="@+id/closeButton"/>
+
+    <EditText
+        android:id="@+id/signIn_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_box"
+        android:backgroundTint="#F5F5F5"
+        android:hint="@string/sign_in_id"
+        android:inputType="textEmailAddress"
+        android:scrollHorizontally="true"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/signIn_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RequestInfoLine" />
+
+    <EditText
+        android:id="@+id/signIn_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text_box"
+        android:backgroundTint="#F5F5F5"
+        android:hint="@string/sign_in_password"
+        android:imeActionLabel="@string/prompt_password"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:scrollHorizontally="true"
+        android:selectAllOnFocus="true"
+        android:textSize="24sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signIn_username" />
+
+    <ImageButton
+        android:id="@+id/redEye"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/signIn_password"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@id/signIn_password"
+        app:layout_constraintTop_toTopOf="@+id/signIn_password"
+        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+    <Button
+        android:id="@+id/btn_sign_in_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/text_box"
+        android:backgroundTint="#F0F0F0"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:text="@string/next"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/RequestAgreementLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agree_all_terms"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@+id/RequestAgreementDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signIn_password" />
+
+    <TextView
+        android:id="@+id/RequestAgreementDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agree_all_terms_detail"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RequestAgreementLine" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/termOfService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RequestAgreementDetail" />
+
+    <TextView
+        android:id="@+id/termOfService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/term_service"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/termOfPersonality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/termOfPersonality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/term_personality"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/termOfPersonalLOC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termOfService" />
+
+    <TextView
+        android:id="@+id/termOfPersonalLOC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="@string/term_personal_loc"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termOfPersonality" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintBottom_toBottomOf="@+id/RequestAgreementDetail"
+        app:layout_constraintEnd_toEndOf="@id/RequestAgreementLine"
+        app:layout_constraintTop_toTopOf="@+id/RequestAgreementLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
