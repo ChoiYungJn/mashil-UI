@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="activity"
+            type="com.example.mashilui.SignInActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +26,7 @@
             android:src="@drawable/close_btn"
             android:backgroundTint="@color/white"
             android:layout_margin="14dp"
+            android:onClick="@{() -> activity.closeBtnClick()}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 
@@ -183,8 +186,10 @@
             android:backgroundTint="#F0F0F0"
             android:text="@string/next"
             android:textSize="24sp"
-            android:clickable="false"
+            android:textColor="@color/black"
+            android:enabled="false"
             android:gravity="center"
+            android:onClick="@{() -> activity.nextBtnClick()}"
             app:layout_constraintHeight_percent="0.085"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

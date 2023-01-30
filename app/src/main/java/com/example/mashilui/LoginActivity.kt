@@ -22,8 +22,4 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(applicationContext, SignInActivity::class.java)
         startActivity(intent)
     }
-
-    private fun showMessage(msg: String) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
-    }
 }
